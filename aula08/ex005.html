@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletim</title>
+</head>
+<body>
+    <h1>Calculo das médias</h1>
+
+    Insira a 1ª nota: <input type="number" id="in_n1"><br>
+    Insira a 2ª nota: <input type="number" id="in_n2"><br>
+
+    <button onclick="calcular_media()">Calcular média</button>
+
+    <div id="div_titulo" style="color: blue;">
+        <strong>Resultado:</strong>
+        <div id="div_resultado"></div>
+    </div>
+</body>
+</html>
+
+<script>
+    function calcular_media(){
+        var n1 = Number.parseFloat(in_n1.value)
+        var n2 = Number.parseFloat(in_n2.value)
+    
+        var media = (n1 + n2) / 2
+
+        alert(`Com as notas ${n1} e ${n2} a média do aluno foi: ${media}`)
+        alert(media >= 6 ? 'Aprovado' : 'Reprovado')
+    }
+
+</script>
